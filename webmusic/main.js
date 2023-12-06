@@ -92,14 +92,14 @@ $(function () {
   
     rankSlide.on("beforeChange", function(event, slick, currentSlide) {
       startProgressbar();
-      if (isPause) changeWhenPaused = true; // 일시정지 상태일때 슬라이드 전환
+      if (isPause) changeWhenPaused = true; 
     });
   
     function startProgressbar() {
       resetProgressbar();
       percentTime = 0;
       if (!isPause) {
-        tick = setInterval(interval, 30); // 일시정지 상태가 아니면 재생시작
+        tick = setInterval(interval, 30); 
       }
     }
   
@@ -133,7 +133,7 @@ $(function () {
         isPause = false;
         autoplayButtonText.text('정지하기');
         if (changeWhenPaused) {
-          startProgressbar(); // 일시정지 상태에서 슬라이드 전환 후 재생버튼 클릭시 재생시작
+          startProgressbar(); 
           changeWhenPaused = false;
         } 
       }
